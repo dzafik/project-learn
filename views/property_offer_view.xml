@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="estate_property_offer_tree_view" model="ir.ui.view">
+            <field name="name">estate.property.view.offer.tree</field>
+            <field name="model">estate.property.offer</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="price" />
+                    <field name="status" />
+                    <field name="partner_id" />
+                    <field name="property_id" />
+                    <field name="creation_date" />
+                    <field name="validity" />
+                    <field name="deadline" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="estate_property_offer_form_view" model="ir.ui.view">
+            <field name="name">estate.property.offer.view.form</field>
+            <field name="model">estate.property.offer</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="price" />
+                            <field name="status" />
+                            <field name="partner_id" />
+                            <field name="property_id" />
+                        </group>
+                        <group>
+                            <field name="creation_date" readonly="1"/>
+                            <field name="validity" />
+                            <field name="deadline" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        
+
+        <record id="action_property_offer" model="ir.actions.act_window">
+            <field name="name">Property Offer</field>
+            <field name="res_model">estate.property.offer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="estate_property_offer_tree_view"></field>
+
+        </record>
+    
+    </data>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <menuitem id="menu_root_property_ads" name="Property Ads" web_icon="realestate,static/description/icon.png">
+    <menuitem id="menu_property_ads" name="Ads">
+      <menuitem id="menu_property" name="Property" action="action_property"/>
+    </menuitem>
+    <menuitem id="menu_property_ads_settings" name="Settings">
+      <menuitem id="menu_property_type" name="Property Types" action="action_property_type"/>
+      <menuitem id="menu_property_tag" name="Property Tag" action="action_property_tag"/>
+      <menuitem id="menu_property_offer" name="Property Offers" action="action_property_offer"/>
+    </menuitem>
+  </menuitem>
+
+</odoo>
